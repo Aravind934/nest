@@ -22,7 +22,7 @@ export class AppService {
     await this.itemRepository.delete(id)
   }
   async updateItem(data:itemEntity){
-    let item = this.getItem(data.id)
-    return this.itemRepository.save(data)
+
+return this.itemRepository.update(data.id,data)
   }
 }
